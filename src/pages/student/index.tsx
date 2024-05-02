@@ -1,7 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 
-import Profile from './profile';
+import EditProfile from './editProfile';
 import Layout from './layout';
+import Profile from './profile';
 
 export default function Student() {
     return (
@@ -11,6 +12,14 @@ export default function Student() {
                 element={
                     <Layout>
                         <Profile />
+                    </Layout>
+                }
+            />
+            <Route
+                path="profile/edit"
+                element={
+                    <Layout>
+                        <EditProfile />
                     </Layout>
                 }
             />

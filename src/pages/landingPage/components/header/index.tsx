@@ -36,17 +36,8 @@ export default function Header() {
                     <div className="flex justify-between">
                         <div className="flex space-x-4">
                             <div>
-                                <a
-                                    href="/"
-                                    className="flex items-center px-2 py-2 text-gray-700 hover:text-gray-900"
-                                >
-                                    <svg
-                                        width="50"
-                                        height="60"
-                                        viewBox="0 0 120 120"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
+                                <a href="/" className="flex items-center px-2 py-2 text-gray-700 hover:text-gray-900">
+                                    <svg width="50" height="60" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             fillRule="evenodd"
                                             clipRule="evenodd"
@@ -54,51 +45,28 @@ export default function Header() {
                                             fill="url(#paint0_linear_4834_1021)"
                                         />
                                         <defs>
-                                            <linearGradient
-                                                id="paint0_linear_4834_1021"
-                                                x1="60"
-                                                y1="0"
-                                                x2="60"
-                                                y2="120"
-                                                gradientUnits="userSpaceOnUse"
-                                            >
+                                            <linearGradient id="paint0_linear_4834_1021" x1="60" y1="0" x2="60" y2="120" gradientUnits="userSpaceOnUse">
                                                 <stop stopColor="#0077B5" />
-                                                <stop
-                                                    offset="1"
-                                                    stopColor="#0E6795"
-                                                />
+                                                <stop offset="1" stopColor="#0E6795" />
                                             </linearGradient>
                                         </defs>
                                     </svg>
-                                    <span className="px-4 font-bold">
-                                        Campus Connect
-                                    </span>
+                                    <span className="px-4 font-bold">Campus Connect</span>
                                 </a>
                             </div>
 
                             <div className="hidden items-center space-x-1 md:hidden">
-                                <a
-                                    href="#"
-                                    className="px-3 py-5 text-gray-700 hover:text-gray-900"
-                                >
+                                <a href="#" className="px-3 py-5 text-gray-700 hover:text-gray-900">
                                     Features
                                 </a>
                             </div>
                         </div>
 
-                        <div
-                            className="hidden items-center space-x-1 md:flex"
-                            onClick={handleLogin}
-                        >
+                        <div className="hidden items-center space-x-1 md:flex" onClick={handleLogin}>
                             <button className="h-10 w-24 rounded bg-primary-color px-3 py-2 text-background-color transition duration-300">
                                 {isLoading ? (
-                                    <div
-                                        className="text-primary inline-block h-4 w-4 animate-spin rounded-full border-2 border-solid border-current border-e-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
-                                        role="status"
-                                    >
-                                        <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-                                            Loading...
-                                        </span>
+                                    <div className="text-primary inline-block h-4 w-4 animate-spin rounded-full border-2 border-solid border-current border-e-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]" role="status">
+                                        <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Loading...</span>
                                     </div>
                                 ) : (
                                     'Sign In'
@@ -107,36 +75,17 @@ export default function Header() {
                         </div>
 
                         <div className="flex items-center md:hidden">
-                            <button
-                                className="mobile-menu-button"
-                                onClick={handleHide}
-                            >
-                                <svg
-                                    className="h-6 w-6"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M4 6h16M4 12h16M4 18h16"
-                                    />
+                            <button className="mobile-menu-button" onClick={handleHide}>
+                                <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                                 </svg>
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <div
-                    className={`mobile-menu ${isHidden && `hidden md:hidden `}`}
-                >
-                    <a
-                        href="#"
-                        className="block px-4 py-2 text-sm hover:bg-gray-200"
-                    >
+                <div className={`mobile-menu ${isHidden && `hidden md:hidden `}`}>
+                    <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-200">
                         Sign In
                     </a>
                 </div>

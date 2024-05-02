@@ -1,11 +1,4 @@
-import {
-    toast,
-    ToastOptions,
-    Slide,
-    Id,
-    ToastContent,
-    ToastContainer,
-} from 'react-toastify';
+import { toast, ToastOptions, Slide, Id, ToastContent, ToastContainer } from 'react-toastify';
 
 export const defaultToastOptions: ToastOptions = {
     position: 'top-right',
@@ -20,11 +13,7 @@ export const defaultToastOptions: ToastOptions = {
 
 type ToastType = 'success' | 'error' | 'info' | 'warning' | 'default';
 
-export default function Toast(
-    type: ToastType,
-    content: ToastContent,
-    options: Partial<ToastOptions> = {},
-): Id {
+export default function Toast(type: ToastType, content: ToastContent, options: Partial<ToastOptions> = {}): Id {
     const optionsToApply = { ...defaultToastOptions, ...options };
 
     switch (type) {

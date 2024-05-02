@@ -11,16 +11,7 @@ interface Modal {
     width?: string;
 }
 
-export default function Modal({
-    isOpen,
-    onClose,
-    children,
-    title,
-    bgOpacity = 0.5,
-    backgroundColor = 'var(--secondary-color)',
-    height = '60vh',
-    width = '50vw',
-}: Modal) {
+export default function Modal({ isOpen, onClose, children, title, bgOpacity = 0.3, backgroundColor = 'var(--secondary-color)', height = '60vh', width = '50vw' }: Modal) {
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflowY = 'hidden';
@@ -39,23 +30,19 @@ export default function Modal({
             }
         };
 
-        document.addEventListener('keydown', handleKeyboardEvent);
+        isOpen && document.addEventListener('keydown', handleKeyboardEvent);
 
         return () => {
-            document.removeEventListener('keydown', handleKeyboardEvent);
+            isOpen && document.removeEventListener('keydown', handleKeyboardEvent);
         };
-    }, [onClose]);
+    }, [isOpen, onClose]);
 
     if (!isOpen) return null;
 
     return (
-        <div
-            className=" fixed left-0 top-0 flex h-full w-full items-center justify-center "
-            onClick={onClose}
-            style={{ backgroundColor: `rgba(0, 0, 0, ${bgOpacity})` }}
-        >
+        <div className=" fixed left-0 top-0 z-50 flex h-full w-full items-center justify-center px-4 md:px-0 " onClick={onClose} style={{ backgroundColor: `rgba(0, 0, 0, ${bgOpacity})` }}>
             <div
-                className=" h-modal-height w-modal-width flex-col rounded-md p-5 pt-0 shadow-sm "
+                className=" h-modal-height w-modal-width flex-col rounded-md p-5 pt-0 shadow-md "
                 onClick={(e) => e.stopPropagation()}
                 style={
                     {
@@ -63,16 +50,16 @@ export default function Modal({
                         '--modal-width': width,
                         backgroundColor: backgroundColor,
                     } as CSSProperties
-                }
-            >
+                }>
                 {title && (
                     <div className=" flex w-full flex-row items-center justify-between ">
-                        <h1>{title}</h1>
+                        <h1 className=" mt-4 text-2xl font-medium ">{title}</h1>
+                        <button className=" mt-4 text-2xl font-medium text-red-500 hover:cursor-pointer focus:border-2 focus:border-black " onClick={onClose}>
+                            X
+                        </button>
                     </div>
                 )}
-                <div className=" flex flex-col items-center justify-center ">
-                    {children}
-                </div>
+                <div className=" flex flex-col items-center justify-center ">{children}</div>
             </div>
         </div>
     );
