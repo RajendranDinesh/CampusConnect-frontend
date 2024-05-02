@@ -37,11 +37,11 @@ export default function Layout({ children }: React.PropsWithChildren) {
                                 </div>
 
                                 <div className="hidden flex-col items-center space-x-1 py-4 md:flex">
-                                    <a href="/feed" className="flex-col items-center px-3 text-text-color md:flex">
+                                    <a href="/feed" className="flex-col items-center px-3 text-primary-color md:flex">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4 11C6.38695 11 8.67613 11.9482 10.364 13.636C12.0518 15.3239 13 17.6131 13 20" stroke="#181818" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                            <path d="M4 4C8.24346 4 12.3131 5.68571 15.3137 8.68629C18.3143 11.6869 20 15.7565 20 20" stroke="#181818" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                            <path d="M5 20C5.55228 20 6 19.5523 6 19C6 18.4477 5.55228 18 5 18C4.44772 18 4 18.4477 4 19C4 19.5523 4.44772 20 5 20Z" stroke="#181818" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                            <path d="M4 11C6.38695 11 8.67613 11.9482 10.364 13.636C12.0518 15.3239 13 17.6131 13 20" stroke="var(--primary-color)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                            <path d="M4 4C8.24346 4 12.3131 5.68571 15.3137 8.68629C18.3143 11.6869 20 15.7565 20 20" stroke="var(--primary-color)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                            <path d="M5 20C5.55228 20 6 19.5523 6 19C6 18.4477 5.55228 18 5 18C4.44772 18 4 18.4477 4 19C4 19.5523 4.44772 20 5 20Z" stroke="var(--primary-color)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                         Feed
                                     </a>
@@ -86,14 +86,14 @@ export default function Layout({ children }: React.PropsWithChildren) {
                                 </div>
                             </div>
 
-                            <div className=" hidden content-center items-center md:flex ">
+                            <a href="/student" className=" hidden content-center items-center md:flex ">
                                 <div className=" content-center items-center gap-3 md:flex ">
                                     <div className=" h-14 w-14 ">
                                         <img src={Dinesh} alt="drives" className=" rounded-full " />
                                     </div>
                                     <span className=" text-2xl text-text-color ">DINESH P R</span>
                                 </div>
-                            </div>
+                            </a>
 
                             <div className="flex items-center md:hidden">
                                 <button className="mobile-menu-button" onClick={handleHide}>

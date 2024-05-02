@@ -1,5 +1,6 @@
 import { Route, Routes, Outlet, Navigate } from 'react-router-dom';
 
+import Feed from './pages/feed';
 import LandingPage from './pages/landingPage';
 import Student from './pages/student';
 
@@ -22,6 +23,7 @@ function AppRoutes() {
             <Route path="/" element={<ProtectedRoute />}>
                 <Route path="student" element={<Navigate to={'profile'} />} />
                 <Route path="student/*" element={<Student />} />
+                <Route path="feed" element={<Feed />} />
             </Route>
         </Routes>
     );

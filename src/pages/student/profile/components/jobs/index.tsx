@@ -2,7 +2,7 @@ import { experiences } from '../../controllers/index';
 
 export default function Jobs() {
     const getRandomColor = () => {
-        const colors = ['slate', 'blue', 'pink', 'orange', 'cyan', 'violet'];
+        const colors = ['#595959', '#386FA4', '#DAB6C4', '#FEFFA5', '#CEE5F2', '#7D7ABC'];
         return colors[Math.floor(Math.random() * colors.length)];
     };
 
@@ -39,7 +39,7 @@ export default function Jobs() {
                                 <h3>Skills Gained</h3>
                                 <div className="flex flex-wrap gap-2">
                                     {experience.skills.map((skill, index) => (
-                                        <div key={index} className={`w-fit rounded-xl bg-${getRandomColor()}-200 px-4 py-1 text-sm`}>
+                                        <div key={index} style={{ backgroundColor: getRandomColor() }} className={`w-fit rounded-xl px-4 py-1 text-sm`}>
                                             {skill}
                                         </div>
                                     ))}
