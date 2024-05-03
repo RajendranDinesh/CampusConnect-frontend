@@ -1,6 +1,8 @@
 import { Route, Routes, Outlet, Navigate } from 'react-router-dom';
 
+import Chat from './pages/chat';
 import Feed from './pages/feed';
+import Jobs from './pages/job';
 import LandingPage from './pages/landingPage';
 import Network from './pages/network';
 import Student from './pages/student';
@@ -28,6 +30,10 @@ function AppRoutes() {
                 <Route path="feed" element={<Feed />} />
 
                 <Route path="network" element={<Network />} />
+
+                <Route path="jobs" element={<Jobs />} />
+
+                <Route path="chat" element={<Chat />} />
             </Route>
         </Routes>
     );
