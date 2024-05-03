@@ -11,15 +11,15 @@ export default function PastRoles(props: PastRoles) {
     const { isOpen, onClose } = props;
 
     return (
-        <Modal isOpen={isOpen} onClose={onClose} title="Roles You've been on Before">
-            <div>
+        <Modal isOpen={isOpen} onClose={onClose} title="Roles You've been on Before" height="fit" width="fit">
+            <div className=" w-64 md:w-full ">
                 {experiences.map((experience, index) => {
                     return (
-                        <div key={index} className=" my-8 flex min-w-full flex-col rounded-md bg-secondary-color px-4 shadow-lg  ">
+                        <div key={index} className=" my-8 flex flex-col rounded-md bg-secondary-color px-4 shadow-lg md:min-w-full  ">
                             <h1 className=" px-4 pt-4 text-2xl font-medium text-text-color ">{experience.company}</h1>
-                            <div className=" w-full overflow-x-auto ">
-                                <div className=" inline-block w-full py-2 ">
-                                    <div className=" overflow-hidden ">
+                            <div className=" w-full ">
+                                <div className=" w-full py-2 ">
+                                    <div className=" overflow-x-auto md:overflow-hidden ">
                                         <table className=" text-surface w-full text-left text-sm font-light ">
                                             <thead className="border-b border-neutral-200">
                                                 <tr>

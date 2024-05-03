@@ -40,7 +40,7 @@ export default function Modal({ isOpen, onClose, children, title, bgOpacity = 0.
     if (!isOpen) return null;
 
     return (
-        <div className=" fixed left-0 top-0 z-50 flex h-full w-full items-center justify-center px-4 md:px-0 " onClick={onClose} style={{ backgroundColor: `rgba(0, 0, 0, ${bgOpacity})` }}>
+        <div className=" fixed left-0 top-0 z-50 flex h-full w-full items-center justify-center px-4 " onClick={onClose} style={{ backgroundColor: `rgba(0, 0, 0, ${bgOpacity})` }}>
             <div
                 className=" h-modal-height w-modal-width flex-col rounded-md p-5 pt-0 shadow-md "
                 onClick={(e) => e.stopPropagation()}
