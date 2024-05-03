@@ -1,10 +1,44 @@
+import { useState } from 'react';
+
+import { chats } from './controller';
+
+import ChatInterface from './components/chat';
 import Layout from './layout';
+import User from './components/user';
+
+import Search from '@/assets/svg/search.svg';
 
 export default function Chat() {
+    const [activeChat, setActiveChat] = useState<undefined | number>(undefined);
+
+    const changeActiveChat = (id: number) => {
+        setActiveChat(id);
+    };
+
     return (
         <Layout>
-            <div className=" flex flex-col gap-8 bg-background-color p-4 md:p-8 md:px-16 ">
-                <div>Chat</div>
+            <div className=" bg-background-color p-4 md:p-8 md:px-16 ">
+                <div className=" flex w-full gap-8 ">
+                    <div className=" flex w-1/4 flex-col gap-4 ">
+                        <div className=" flex gap-4 rounded-md bg-secondary-color px-2 py-2 shadow-sm ">
+                            <input className=" min-w-[60%] p-2 " name="searchPeople" placeholder="Search" />
+                            <button className=" p-2 ">
+                                <img alt="search" src={Search} />
+                            </button>
+                        </div>
+                        <div className=" scrollbar max-h-96 w-full overflow-y-auto rounded-md bg-secondary-color shadow-md ">
+                            <div>
+                                {chats.map((chat, index) => {
+                                    return <User activeId={activeChat} name={chat.name} id={index} changeTo={changeActiveChat} key={index} />;
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                    <div className=" w-full ">
+                        {activeChat === undefined && <>How about we chat with someone?</>}
+                        {typeof activeChat === 'number' && <ChatInterface id={activeChat} />}
+                    </div>
+                </div>
             </div>
         </Layout>
     );

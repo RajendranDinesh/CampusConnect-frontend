@@ -24,3 +24,16 @@
         --modal-height: 80%;
     }
 }
+
+.scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    border-radius: 5px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background: #18181820;
+    border-radius: 16px;
+}
