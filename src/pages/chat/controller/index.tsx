@@ -25,6 +25,33 @@ export const chats = [
         id: 1,
         name: 'Amal Davish',
         lastSeen: '10 minutes',
+        messages: [
+            {
+                content: 'Do you remember Kishore, My roomate?',
+                time: '4:28PM',
+                by: -1,
+            },
+            {
+                content: 'Yeah, what about him?',
+                time: '4:32PM',
+                by: 1,
+            },
+            {
+                content: 'He offered me a job!',
+                time: '4:35PM',
+                by: -1,
+            },
+            {
+                content: 'What are you gonna do?',
+                time: '4:38PM',
+                by: 1,
+            },
+            {
+                content: 'IDK man!',
+                time: '4:35PM',
+                by: -1,
+            },
+        ],
     },
     {
         id: 2,
