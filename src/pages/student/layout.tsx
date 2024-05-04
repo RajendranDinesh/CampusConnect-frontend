@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 import Dinesh from '@/assets/images/student/DineshBlazer.jpg';
-import Recruting from '@/assets/images/student/recruting.png';
 
 export default function Layout({ children }: React.PropsWithChildren) {
     const [isHidden, setIsHidden] = useState(true);
@@ -70,7 +69,7 @@ export default function Layout({ children }: React.PropsWithChildren) {
                                 </div>
 
                                 <div className="hidden flex-col items-center space-x-1 py-4 md:flex">
-                                    <a href="#" className="flex-col items-center px-3 text-text-color md:flex">
+                                    <a href="/chat" className="flex-col items-center px-3 text-text-color md:flex">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="#181818" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
@@ -79,8 +78,17 @@ export default function Layout({ children }: React.PropsWithChildren) {
                                 </div>
 
                                 <div className="hidden flex-col items-center space-x-1 py-4 md:flex">
-                                    <a href="#" className="flex-col items-center px-3 text-text-color md:flex">
-                                        <img src={Recruting} className="h-6 w-6" alt="drives" />
+                                    <a href="/drives" className="flex-col items-center px-3 text-text-color md:flex">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clipPath="url(#clip0_403_3695)">
+                                                <path d="M19 2V0H17V2H15V0H13V2H11V0H9V2H7V0H5V2H3V21C3 21.7956 3.31607 22.5587 3.87868 23.1213C4.44129 23.6839 5.20435 24 6 24H18C18.7956 24 19.5587 23.6839 20.1213 23.1213C20.6839 22.5587 21 21.7956 21 21V2H19ZM19 21C19 21.2652 18.8946 21.5196 18.7071 21.7071C18.5196 21.8946 18.2652 22 18 22H6C5.73478 22 5.48043 21.8946 5.29289 21.7071C5.10536 21.5196 5 21.2652 5 21V4H19V21ZM17 9H7V7H17V9ZM17 13H7V11H17V13ZM13 17H7V15H13V17Z" fill="#181818" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_403_3695">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
                                         Drive
                                     </a>
                                 </div>

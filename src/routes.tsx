@@ -1,6 +1,7 @@
 import { Route, Routes, Outlet, Navigate } from 'react-router-dom';
 
 import Chat from './pages/chat';
+import Drives from './pages/drives';
 import Feed from './pages/feed';
 import Jobs from './pages/job';
 import LandingPage from './pages/landingPage';
@@ -10,7 +11,7 @@ import Student from './pages/student';
 function ProtectedRoute() {
     const result = localStorage.getItem('authToken') !== null;
 
-    return result ? <Outlet /> : <Navigate to="/login" />;
+    return result ? <Outlet /> : <Navigate to="/" />;
 }
 
 export function Logout() {
@@ -24,16 +25,18 @@ function AppRoutes() {
             <Route path="/" element={<LandingPage />} />
 
             <Route path="/" element={<ProtectedRoute />}>
-                <Route path="student" element={<Navigate to={'profile'} />} />
-                <Route path="student/*" element={<Student />} />
+                <Route path="chat" element={<Chat />} />
+
+                <Route path="drives/*" element={<Drives />} />
 
                 <Route path="feed" element={<Feed />} />
 
-                <Route path="network" element={<Network />} />
-
                 <Route path="jobs" element={<Jobs />} />
 
-                <Route path="chat" element={<Chat />} />
+                <Route path="network" element={<Network />} />
+
+                <Route path="student" element={<Navigate to={'profile'} />} />
+                <Route path="student/*" element={<Student />} />
             </Route>
         </Routes>
     );
