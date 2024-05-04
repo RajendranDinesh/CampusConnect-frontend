@@ -1,10 +1,24 @@
+interface Level {
+    id: number;
+    name: string;
+    conductedBy: string;
+    criteria: string;
+}
+
+interface Role {
+    name: string;
+    availability: number;
+    expectedSalray: number[];
+}
+
 export interface Company {
     id: number;
     logo: string;
     name: string;
-    roles: { name: string; availability: number; expectedSalray: number[] }[];
+    roles: Role[];
     isEligible: boolean;
     totalApplicants: number;
+    levels: Level[];
 }
 
 interface Listing {
