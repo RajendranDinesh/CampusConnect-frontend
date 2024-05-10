@@ -6,7 +6,7 @@ import Tick from '@/assets/svg/tick.svg';
 interface EditField {
     label: string;
     value: string;
-    type: 'textarea' | 'datetime' | 'text';
+    type?: 'textarea' | 'datetime' | 'text';
     onChange: (v: string) => void;
 }
 

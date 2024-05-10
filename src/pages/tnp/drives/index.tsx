@@ -88,6 +88,7 @@ export default function Drives() {
                                             py-2 text-sm font-normal text-gray-700 hover:bg-gray-100 "
                                                             onClick={(e) => {
                                                                 e.stopPropagation();
+                                                                window.location.href = `/tnp/drives/${company.id}/edit`;
                                                             }}>
                                                             <img src={Pen} alt="edit" /> Edit
                                                         </button>
