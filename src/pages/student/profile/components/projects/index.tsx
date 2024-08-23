@@ -5,7 +5,7 @@ export default function Project() {
         <div className=" rounded-md bg-secondary-color p-5 shadow-md md:w-full ">
             <div className=" flex items-center gap-8 ">
                 <h2 className=" text-3xl font-medium text-text-accent-color ">Projects</h2>
-                <span className=" text-neutral-500 ">3 of 12</span>
+                {/* <span className=" text-neutral-500 ">3 of 12</span> */}
             </div>
 
             {/* cards container */}
@@ -27,7 +27,7 @@ export default function Project() {
                 ))}
             </div>
 
-            <span className=" cursor-pointer self-end text-primary-color hover:underline ">SHOW ALL (12)</span>
+            {/* <span className=" cursor-pointer self-end text-primary-color hover:underline ">SHOW ALL (12)</span> */}
         </div>
     );
 }

@@ -4,6 +4,7 @@ import Drives from './drives';
 import EditDrive from './editDrive';
 import Layout from './layout';
 import Home from './home';
+import Analysis from './analysis';
 
 export default function TNP() {
     return (
@@ -29,6 +30,14 @@ export default function TNP() {
                 element={
                     <Layout>
                         <EditDrive />
+                    </Layout>
+                }
+            />
+            <Route
+                path="/drives/analysis"
+                element={
+                    <Layout>
+                        <Analysis />
                     </Layout>
                 }
             />

@@ -7,7 +7,7 @@ export const onGoingDrives = [
     {
         image: RE,
         name: 'Royal Enfield',
-        totalApplicants: 69,
+        totalApplicants: 30,
     },
 ];
 

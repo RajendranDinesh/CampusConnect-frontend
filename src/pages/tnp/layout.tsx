@@ -49,6 +49,13 @@ export default function Layout({ children }: React.PropsWithChildren) {
                                         Drives
                                     </a>
                                 </div>
+
+                                <div className="hidden flex-col items-center space-x-1 py-4 md:flex">
+                                    <a href="/tnp/drives/analysis" className="flex-col items-center px-3 text-text-color md:flex">
+                                        <img width="24" height="24" src="https://img.icons8.com/pulsar-line/48/financial-analytics.png" alt="financial-analytics" />
+                                        Analysis
+                                    </a>
+                                </div>
                             </div>
 
                             <div className=" hidden content-center items-center md:flex ">
