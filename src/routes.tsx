@@ -8,6 +8,7 @@ import LandingPage from './pages/landingPage';
 import Network from './pages/network';
 import Student from './pages/student';
 import TNP from './pages/tnp';
+import Admin from './pages/admin';
 
 function ProtectedRoute() {
     const result = localStorage.getItem('authToken') !== null;
@@ -40,6 +41,8 @@ function AppRoutes() {
                 <Route path="student/*" element={<Student />} />
 
                 <Route path="tnp/*" element={<TNP />} />
+
+                <Route path="admin/*" element={<Admin />} />
             </Route>
         </Routes>
     );
