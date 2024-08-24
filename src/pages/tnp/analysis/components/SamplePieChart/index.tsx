@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { PieChart, Pie, Sector } from 'recharts';
 
 const data = [
@@ -48,8 +48,11 @@ export default function SamplePieChart() {
     );
 
     return (
-        <PieChart width={400} height={400}>
-            <Pie activeIndex={activeIndex} activeShape={renderActiveShape} data={data} cx={200} cy={200} innerRadius={60} outerRadius={80} fill="#8884d8" dataKey="value" onMouseEnter={onPieEnter} />
-        </PieChart>
+        <div className=" flex flex-col items-center p-4 ">
+            <h1>Total Students Participation From Different Departments</h1>
+            <PieChart width={400} height={400}>
+                <Pie activeIndex={activeIndex} activeShape={renderActiveShape} data={data} cx={150} cy={150} innerRadius={60} outerRadius={80} fill="#8884d8" dataKey="value" onMouseEnter={onPieEnter} />
+            </PieChart>
+        </div>
     );
 }
