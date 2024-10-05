@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { redirect } from 'react-router-dom';
 
 import Toast from '@/components/Toast';
+import { BASE_URL } from '@/networking';
 
 export default function Header() {
     const [isHidden, setIsHidden] = useState(true);
@@ -14,13 +15,13 @@ export default function Header() {
     const handleLogin = () => {
         setIsLoading(true);
 
-        localStorage.setItem('authToken', 'token');
+        Toast('info', <p>Redirecting for google authentication.</p>);
 
         setTimeout(() => {
             setIsLoading(false);
         }, 1000);
 
-        Toast('success', <p>Logged in</p>);
+        window.location.href = `${BASE_URL}auth/google`;
     };
 
     useEffect(() => {

@@ -9,15 +9,16 @@ import Network from './pages/network';
 import Student from './pages/student';
 import TNP from './pages/tnp';
 import Admin from './pages/admin';
+import CallBack from './auth';
 
 function ProtectedRoute() {
-    const result = localStorage.getItem('authToken') !== null;
+    const result = localStorage.getItem('tocopass') !== null;
 
     return result ? <Outlet /> : <Navigate to="/" />;
 }
 
 export function Logout() {
-    localStorage.removeItem('authToken');
+    localStorage.removeItem('tocopass');
     return <Navigate to="/login" />;
 }
 
@@ -25,6 +26,8 @@ function AppRoutes() {
     return (
         <Routes>
             <Route path="/" element={<LandingPage />} />
+
+            <Route path="/auth/google/callback" element={<CallBack />} />
 
             <Route path="/" element={<ProtectedRoute />}>
                 <Route path="chat" element={<Chat />} />
