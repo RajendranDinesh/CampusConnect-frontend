@@ -61,7 +61,7 @@ const Request = async (method: RequestMethod, url: string, body?: unknown, param
         const response = await instance.request(requestOptions);
         return response;
     } catch (error) {
-        if ((error as AxiosError).response && (error as AxiosError).response!.status === 498) {
+        if ((error as AxiosError).response && (error as AxiosError).response?.status === 498) {
             localStorage.removeItem('tocopass');
             window.location.href = '/login';
         }
