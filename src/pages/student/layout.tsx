@@ -115,38 +115,32 @@ export default function Layout({ children }: React.PropsWithChildren) {
 
                     <div className={`mobile-menu ${isHidden && `hidden md:hidden `}`}>
                         <div>
-                            <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-200">
+                            <a href="/feed" className="block px-4 py-2 text-sm hover:bg-gray-200">
                                 Feed
                             </a>
                         </div>
 
                         <div>
-                            <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-200">
+                            <a href="/network" className="block px-4 py-2 text-sm hover:bg-gray-200">
                                 Network
                             </a>
                         </div>
 
                         <div>
-                            <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-200">
+                            <a href="/jobs" className="block px-4 py-2 text-sm hover:bg-gray-200">
                                 Jobs
                             </a>
                         </div>
 
                         <div>
-                            <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-200">
+                            <a href="/chat" className="block px-4 py-2 text-sm hover:bg-gray-200">
                                 Chat
                             </a>
                         </div>
 
                         <div>
-                            <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-200">
+                            <a href="/drives" className="block px-4 py-2 text-sm hover:bg-gray-200">
                                 Drive
-                            </a>
-                        </div>
-
-                        <div>
-                            <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-200">
-                                Sign In
                             </a>
                         </div>
                     </div>

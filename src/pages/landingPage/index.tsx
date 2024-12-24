@@ -1,8 +1,16 @@
+import { useEffect } from 'react';
+
 import Header from './components/header';
 
 import LandingCover from '@/assets/images/landingPage/landing.png';
 
 export default function LandingPage() {
+    useEffect(() => {
+        const passphrase = localStorage.getItem(`tocopass`);
+
+        if (passphrase !== null) window.location.href = '/student';
+    });
+
     return (
         <>
             <Header />
